@@ -3,10 +3,10 @@
 apt-get update
 
 # Build tools:
-apt-get install build-essential cmake make gcc g++ yasm unzip wget
+apt-get install build-essential cmake make gcc g++ ccache yasm unzip wget
 
 # Media I/O:
-apt-get install zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-dev libjasper-dev libopenexr-dev libgdal-dev
+apt-get install zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-dev libjasper-dev libopenexr-dev libgdal-dev libgphoto2-dev
 
 # Video I/O:
 apt-get install libdc1394-22-dev libavcodec-dev libavformat-dev libavresample-dev libswscale-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libopencore-amrnb-dev libopencore-amrwb-dev libv4l-dev
