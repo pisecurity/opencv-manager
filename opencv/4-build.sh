@@ -32,7 +32,8 @@ cmake \
 	-DENABLE_VFPV3=$arm \
 	-DENABLE_PRECOMPILED_HEADERS=OFF \
 	-DBUILD_opencv_java=OFF \
-	-DBUILD_opencv_python=$pyth \
+	-DBUILD_opencv_python2=ON \
+	-DBUILD_opencv_python3=$pyth \
 	-DCMAKE_INSTALL_PREFIX=/usr/local/opencv-$version \
 	-DOPENCV_ENABLE_NONFREE=ON \
 	-DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
@@ -44,15 +45,13 @@ echo "############################################################"
 
 make -k -j2
 
-if [ "$pyth" = "ON" ]; then
-	echo "############################################################"
-	echo "# Building opencv-$version on $release - second pass"
-	echo "############################################################"
+echo "############################################################"
+echo "# Building opencv-$version on $release - second pass"
+echo "############################################################"
 
-	# building cv2.cpp.o for python modules probably failed above - let's
-	# try once again in single process (so all memory will be available to it)
-	make
-fi
+# building cv2.cpp.o for python modules probably failed above - let's
+# try once again in single process (so all memory will be available to it)
+make
 
 dt2=`date +%Y%m%d-%H%M`
 echo "############################################################"
