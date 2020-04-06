@@ -15,7 +15,7 @@ apt-get install libdc1394-22-dev libavcodec-dev libavformat-dev libavresample-de
 apt-get install libtbb-dev libeigen3-dev liblapacke-dev libatlas-base-dev
 
 # OCR and fonts support:
-apt-get install tesseract-ocr tesseract-ocr-pol libharfbuzz-dev libfreetype6-dev
+apt-get install tesseract-ocr tesseract-ocr-pol libtesseract-dev libharfbuzz-dev libfreetype6-dev
 
 # Python interface:
 apt-get install python-dev python-numpy python3-dev python3-numpy
