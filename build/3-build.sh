@@ -3,7 +3,7 @@
 if [ "$1" != "" ]; then
 	version=$1
 else
-	version='4.2.0'
+	version='4.3.0'
 fi
 
 if [ "`uname -m`" = "armv7l" ]; then

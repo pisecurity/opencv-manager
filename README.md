@@ -1,11 +1,7 @@
 # Overview
 
-`opencv-build-scripts` is a set of scripts for compiling OpenCV:
+`opencv-manager` is a set of scripts for managing multiple versions of OpenCV on the same host, either by installing ready to use packages, or by building it yourself from sources.
 
-- various OpenCV versions
-- for various platforms, including Raspberry Pi and clones
-- for various Debian/Raspbian versions
-- possibly including Intel OpenVINO support
 
 # Build scripts license
 
@@ -41,16 +37,16 @@ Latest version can be found here: https://opencv.org/license/
 
 By downloading, copying, installing or using the software you agree to this license. If you do not agree to this license, do not download, install, copy or use the software.
 
-License Agreement
-For Open Source Computer Vision Library
+License Agreement\
+For Open Source Computer Vision Library\
 (3-clause BSD License)
 
-Copyright (C) 2000-2019, Intel Corporation, all rights reserved.
-Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
-Copyright (C) 2009-2016, NVIDIA Corporation, all rights reserved.
-Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
-Copyright (C) 2015-2016, OpenCV Foundation, all rights reserved.
-Copyright (C) 2015-2016, Itseez Inc., all rights reserved.
+Copyright (C) 2000-2019, Intel Corporation, all rights reserved.\
+Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.\
+Copyright (C) 2009-2016, NVIDIA Corporation, all rights reserved.\
+Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.\
+Copyright (C) 2015-2016, OpenCV Foundation, all rights reserved.\
+Copyright (C) 2015-2016, Itseez Inc., all rights reserved.\
 Third party copyrights are property of their respective owners.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-apt-get update
-
 # Build tools:
 apt-get install build-essential cmake make gcc g++ ccache yasm unzip wget
 

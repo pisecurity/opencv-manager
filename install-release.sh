@@ -3,14 +3,14 @@
 if [ "$1" != "" ]; then
 	version=$1
 else
-	version='4.2.0'
+	version='4.3.0'
 fi
 
 release=`lsb_release -cs`
 arch=`uname -m`
 if [ "$arch" = "x86_64" ]; then arch="amd64"; fi
 
-link="https://github.com/fajneit/opencv-build-scripts/releases/download/$version/opencv-$version-nox+contrib+nonfree-$release-$arch.tar.gz"
+link="https://github.com/pisecurity/opencv-manager/releases/download/$version/opencv-$version-nox+contrib+nonfree-$release-$arch.tar.gz"
 file=`basename $link`
 
 
@@ -27,4 +27,4 @@ fi
 
 tar xzvf $file
 
-$prevdir/common-install.sh
+$prevdir/internal/common-install.sh $version

@@ -3,7 +3,7 @@
 if [ "$1" != "" ]; then
 	version=$1
 else
-	version='4.2.0'
+	version='4.3.0'
 fi
 
 prevdir=`dirname $0`
@@ -14,4 +14,4 @@ if [ "$prevdir" = ".." ]; then echo "run this script from its directory"; exit 1
 cd /usr/local/src/opencv-$version/build
 make install
 
-$prevdir/common-install.sh
+$prevdir/../internal/common-install.sh $version
