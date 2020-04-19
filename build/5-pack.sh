@@ -7,8 +7,9 @@ else
 fi
 
 release=`lsb_release -cs`
+arch=`uname -m`
 
-if [ -d /usr/local/opencv-$version ] && [ ! -f /usr/local/opencv-$version-$release.tar.gz ]; then
+if [ -d /usr/local/opencv-$version ] && [ ! -f /usr/local/opencv-$version-$release-$arch.tar.gz ]; then
 	cd /usr/local
-	tar czvf opencv-$version-$release.tar.gz opencv-$version
+	tar czvf opencv-$version-$release-$arch.tar.gz opencv-$version
 fi

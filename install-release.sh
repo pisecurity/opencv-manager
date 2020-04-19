@@ -9,6 +9,7 @@ fi
 release=`lsb_release -cs`
 arch=`uname -m`
 if [ "$arch" = "x86_64" ]; then arch="amd64"; fi
+if [ "$arch" = "aarch64" ]; then arch="arm64"; fi
 
 link="https://github.com/pisecurity/opencv-manager/releases/download/$version/opencv-$version-nox+contrib+nonfree-$release-$arch.tar.gz"
 file=`basename $link`
