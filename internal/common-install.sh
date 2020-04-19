@@ -21,13 +21,18 @@ if [ -h /usr/lib/pkgconfig/opencv.pc ]; then
 	rm -f /usr/lib/pkgconfig/opencv.pc
 fi
 if [ ! -f /usr/lib/pkgconfig/opencv.pc ]; then
-	ln -s /usr/local/opencv-$version/lib/pkgconfig/opencv.pc /usr/lib/pkgconfig/opencv.pc
+	ln -s /usr/local/opencv-$version/lib/pkgconfig/opencv.pc /usr/lib/pkgconfig
 fi
 
 
 # Python 2.x support
 mkdir -p /usr/local/lib/python2.7/dist-packages
-ln -s /usr/local/opencv-$version/lib/python2.7/dist-packages/cv2.so /usr/local/lib/python2.7/dist-packages
+if [ -h /usr/local/lib/python2.7/dist-packages/cv2.so ]; then
+	rm -f /usr/local/lib/python2.7/dist-packages/cv2.so
+fi
+if [ ! -f /usr/local/lib/python2.7/dist-packages/cv2.so ]; then
+	ln -s /usr/local/opencv-$version/lib/python2.7/dist-packages/cv2.so /usr/local/lib/python2.7/dist-packages
+fi
 
 
 # Python 3.x support

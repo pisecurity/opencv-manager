@@ -22,10 +22,11 @@ if [ "$prevdir" = ".." ]; then echo "run this script from its directory"; exit 1
 
 cd /usr/local
 
-if [ ! -f $file ]; then
-	wget $link
+if [ ! -d /usr/local/opencv-$version ]; then
+	if [ ! -f $file ]; then
+		wget $link
+	fi
+	tar xzvf $file
 fi
-
-tar xzvf $file
 
 $prevdir/internal/common-install.sh $version
