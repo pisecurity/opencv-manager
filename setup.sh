@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ -f /etc/friendlyelec-release ]; then
+	echo "OpenCV is not supported on this platform"
+	exit 0
+fi
+
 # Build tools:
 apt-get install build-essential cmake make gcc g++ ccache yasm unzip wget
 
